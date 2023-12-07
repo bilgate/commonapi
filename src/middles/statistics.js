@@ -36,7 +36,7 @@ const apiStatisticsMiddleware = (req, res, next) => {
 // 定时任务：在凌晨3点半时重置计数并写入日志文件
 const resetAndLogTask = () => {
   const now = new Date();
-  const resetTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds()+30);
+  const resetTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 3, 0, 0);
 
   // 计算距离下一次重置的时间间隔
   const timeUntilReset = resetTime.getTime() - now.getTime();

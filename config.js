@@ -10,6 +10,17 @@ module.exports = {
         },
         api: {
             baseUrl: 'http://localhost:3000'
+        },
+        swaggerOptions:{
+            definition: {
+                openapi: '3.0.0',
+                info: {
+                    title: '扁平大陆智能平台',
+                    version: '1.0.0',
+                    description: 'API description',
+                },
+            },
+            apis: ['./src/routers/*.js'], // Path to your API routes
         }
     },
     test: {
@@ -21,6 +32,17 @@ module.exports = {
         },
         api: {
             baseUrl: 'http://test-server:3000'
+        },
+        swaggerOptions:{
+            definition: {
+                openapi: '3.0.0',
+                info: {
+                    title: '扁平大陆智能平台',
+                    version: '1.0.0',
+                    description: 'API description',
+                },
+            },
+            apis: ['./src/routers/*.js'], // Path to your API routes
         }
     },
     production: {
@@ -32,6 +54,17 @@ module.exports = {
         },
         api: {
             baseUrl: 'https://api.yourdomain.com'
+        },
+        swaggerOptions:{
+            definition: {
+                openapi: '3.0.0',
+                info: {
+                    title: '扁平大陆智能平台',
+                    version: '1.0.0',
+                    description: 'API description',
+                },
+            },
+            apis: ['./src/routers/*.js'], // Path to your API routes
         }
     }
 };
